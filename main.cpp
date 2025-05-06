@@ -38,7 +38,7 @@ int main() {
     std::cout << "Found " << solutions.size() << " words!" << std::endl;
     std::cout << "Execution time: " << duration.count() << " milliseconds." << std::endl;
 
-    std::ofstream output_file("found_words.txt");
+    std::ofstream output_file("solutions.txt");
 
     if (!output_file.is_open()) {
         std::cerr << "Error opening file!" << std::endl;
