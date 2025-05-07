@@ -2,9 +2,10 @@
 #include <iostream>
 
 #include "BucketSolver.h"
+#include "TrieSolver.h"
 
 int main() {
-    BucketSolver solver;
+    TrieSolver solver;
     std::vector<std::vector<char>> grid;
     std::string row;
     for (int i = 0; i < 4; i++) {
