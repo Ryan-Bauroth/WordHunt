@@ -24,6 +24,8 @@ the word hunt.
 ## Installation & Use
 
 ## Trie Solver
+![test](https://github.com/user-attachments/assets/c397e33d-1ea8-4371-a189-61583d0114d6)
+
 
 
 ## Bucket Solver
