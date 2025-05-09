@@ -52,7 +52,7 @@ skip any words starting with the letter M, as there
 are no words in the English language that start
 with an 'MT'. This method of storage, therefore, significantly
 increases the speed of execution, taking mere milliseconds 
-compared to the seconds the bucket solver took.
+compared to the seconds the bucket solver takes.
 
 ## Resources
 [Article discussing the Trie approach I took](https://medium.com/@abhay.khanna_37314/word-hunt-cracking-the-code-9344188b1edb)
