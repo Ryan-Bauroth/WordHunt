@@ -39,6 +39,7 @@ which don't have their first letter on the board.
 
 ## Trie Solver
 ![test](https://github.com/user-attachments/assets/c397e33d-1ea8-4371-a189-61583d0114d6)
+
 The other algorithm in this project uses
 the Trie structure at its base. As you can see
 in the image above, a Trie holds words as a 
