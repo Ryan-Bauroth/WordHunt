@@ -7,11 +7,24 @@
 #include <iostream>
 #include <set>
 
+/**
+ * Checks if a certain index is within board
+ * @param x_index int
+ * @param y_index int
+ * @return if index is valid
+ */
 bool checkIndex(int x_index, int y_index) {
     return x_index >= 0 && x_index < BucketSolver::size &&
            y_index >= 0 && y_index < BucketSolver::size;
 }
 
+/**
+ * Finds all locations where a certain letter exists around a spot on the grid
+ * @param starting_index current index on grid
+ * @param letter letter to search for
+ * @param grid grid of letters
+ * @return all found locations of a given letter, empty if none
+ */
 std::vector<std::vector<int>> findLetter(std::vector<int> starting_index, char letter, std::vector<std::vector<char>> grid) {
     std::vector<std::vector<int>> offsets = {{-1, -1}, {0, -1}, {1, -1}, {-1, 0}, {1, 0}, {-1, 1}, {0, 1}, {1, 1}};
     std::vector<std::vector<int>> result;
@@ -28,6 +41,17 @@ std::vector<std::vector<int>> findLetter(std::vector<int> starting_index, char l
     return result;
 }
 
+/**
+ * Depth first search recursive function to find words
+ * @param word word searched for
+ * @param index # of letters into current word
+ * @param x index of grid
+ * @param y int of grid
+ * @param grid grid of letters
+ * @param visited grid of visited locations
+ * @param path current path
+ * @return true if word exists
+ */
 bool dfs(const std::string& word, int index, int x, int y,
          const std::vector<std::vector<char>>& grid,
          std::vector<std::vector<bool>>& visited,
@@ -55,6 +79,11 @@ bool dfs(const std::string& word, int index, int x, int y,
     return false;
 }
 
+/**
+ * Solves the grid for all possible solutions
+ * @param grid grid of letters
+ * @return all possible solutions
+ */
 std::vector<std::string> BucketSolver::solveGrid(std::vector<std::vector<char>> grid) {
     std::set<std::string> found_words_set;
     int rows = grid.size(), cols = grid[0].size();
@@ -76,6 +105,10 @@ std::vector<std::string> BucketSolver::solveGrid(std::vector<std::vector<char>> 
     return found_words;
 }
 
+/**
+ * Constructor for Bucket Solver
+ * Sorts valid word list into buckets
+ */
 BucketSolver::BucketSolver() {
     std::ifstream file("filtered_words.txt");
 

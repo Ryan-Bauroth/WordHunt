@@ -12,6 +12,7 @@ public:
     TrieNode();
     bool is_end;
     std::unordered_map<char, TrieNode*> children;
+    int pruned_paths = 0;
 };
 
 

@@ -4,6 +4,9 @@
 
 #include "TrieNode.h"
 
+/**
+ * Constructor for TrieNode
+ */
 TrieNode::TrieNode() {
     is_end = false;
 }

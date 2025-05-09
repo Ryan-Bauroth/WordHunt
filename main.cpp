@@ -5,7 +5,10 @@
 #include "TrieSolver.h"
 
 int main() {
+    // can be either BucketSolver or TrieSolver
     TrieSolver solver;
+
+    // input for play grid
     std::vector<std::vector<char>> grid;
     std::string row;
     for (int i = 0; i < 4; i++) {
@@ -23,6 +26,7 @@ int main() {
         }
     }
 
+    // times and runs solver, displaying results
     std::cout << "Solving..." << std::endl;
     auto start_time = std::chrono::high_resolution_clock::now();
 
@@ -30,15 +34,17 @@ int main() {
 
     auto duration = duration_cast<std::chrono::milliseconds>( std::chrono::high_resolution_clock::now() - start_time);
 
+    // sorts solutions by size of word
     std::sort(solutions.begin(), solutions.end(), [](const std::string& a, const std::string& b) {
         return a.size() > b.size();
     });
 
 
-    std::cout << std::endl;
-    std::cout << "Found " << solutions.size() << " words!" << std::endl;
-    std::cout << "Execution time: " << duration.count() << " milliseconds." << std::endl;
+    std::cout << "Found " << solutions.size() << " words" << std::endl;
+    std::cout << "Execution time: " << duration.count() << " milliseconds" << std::endl;
 
+
+    // saves all solutions to a text file
     std::ofstream output_file("solutions.txt");
 
     if (!output_file.is_open()) {

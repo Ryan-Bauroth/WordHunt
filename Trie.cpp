@@ -4,14 +4,26 @@
 
 #include "Trie.h"
 
+/**
+ * Constructor for Trie
+ */
 Trie::Trie() {
     root = new TrieNode();
 }
 
+/**
+ * Gets root of Trie
+ * @return TrieNode root
+ */
 TrieNode *Trie::getRoot() {
     return root;
 }
 
+/**
+ * Inserts a new word into the Trie
+ * Follows existing path if it exists, then creates new path when needed
+ * @param word word to insert
+ */
 void Trie::insert(const std::string &word) {
     TrieNode *node = root;
     for (char c : word) {
