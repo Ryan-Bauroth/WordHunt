@@ -56,3 +56,5 @@ compared to the seconds the bucket solver takes.
 
 ## Resources
 [Article discussing the Trie approach I took](https://medium.com/@abhay.khanna_37314/word-hunt-cracking-the-code-9344188b1edb)
+[Presentation PDF](https://github.com/user-attachments/files/20126882/Final.Presentation.pdf)
+
