@@ -18,8 +18,9 @@ This project uses three main methods to benchmark
 how successful the algorithms are at solving
 the word hunt.
 1. \# of words found
-2. Speed of execution
-3. (For Trie Solver) \# of paths pruned
+2. Speed and memory usage of initialization
+3. Speed of execution
+4. (For Trie Solver) \# of paths pruned
 
 ## Installation & Use
 1. Clone the repository by copying the HTTPS link into
