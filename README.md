@@ -24,8 +24,8 @@ the word hunt.
 ## Installation & Use
 1. Clone the repository by copying the HTTPS link into
    the IDE of your choice & install needed packages.
-2. Choose which algorithm you wish to use on the 
-ninth line of the main.cpp file: ```TrieSolver``` OR ```BucketSolver```.
+2. Choose which algorithm you wish to use on line
+12 of the main.cpp file: ```TrieSolver``` OR ```BucketSolver```.
 3. Run the main.cpp file and input your game board one row a time (no spaces!)
 
 ## Bucket Solver

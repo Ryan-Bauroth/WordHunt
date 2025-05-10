@@ -6,12 +6,12 @@
 
 int main() {
     std::cout << "Enter 0 at any time to exit" << std::endl;
+
     // can be either BucketSolver or TrieSolver
     auto start = std::chrono::high_resolution_clock::now();
-    BucketSolver solver;
+    TrieSolver solver;
     auto dur = duration_cast<std::chrono::milliseconds>( std::chrono::high_resolution_clock::now() - start);
     std::cout << " initialized in " << dur.count() << " milliseconds" << std::endl;
-
 
     while (true) {
         std::cout << std::endl;
@@ -53,7 +53,7 @@ int main() {
             return a.size() > b.size();
         });
 
-
+        std::cout << std::endl;
         std::cout << "Found " << solutions.size() << " words" << std::endl;
         std::cout << "Execution time: " << duration.count() << " milliseconds" << std::endl;
 
