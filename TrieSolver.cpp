@@ -81,6 +81,7 @@ std::vector<std::string> TrieSolver::solveGrid(std::vector<std::vector<char> > g
 /**
  * Constructor for TrieSolver
  * Sets up Trie's from valid word list
+ * Checks size of Trie after initialization
  */
 TrieSolver::TrieSolver(): trie() {
     std::ifstream file("filtered_words.txt");
@@ -98,4 +99,6 @@ TrieSolver::TrieSolver(): trie() {
     }
 
     file.close();
+
+    std::cout << "Trie of size " << trie.calculateTrieMemoryUsage(&trie) / 1024 << " KB";
 }

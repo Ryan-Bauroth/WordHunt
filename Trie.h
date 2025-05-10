@@ -13,6 +13,7 @@ public:
     Trie();
 
     void insert(const std::string& word);
+    size_t calculateTrieMemoryUsage(Trie* trie);
 
     TrieNode* getRoot();
 

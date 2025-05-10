@@ -108,6 +108,7 @@ std::vector<std::string> BucketSolver::solveGrid(std::vector<std::vector<char>> 
 /**
  * Constructor for Bucket Solver
  * Sorts valid word list into buckets
+ * Check size of Bucket after initialization
  */
 BucketSolver::BucketSolver() {
     std::ifstream file("filtered_words.txt");
@@ -125,6 +126,22 @@ BucketSolver::BucketSolver() {
     while (std::getline(file, line)) {
         buckets.at(line[0]).push_back(line);
     }
+
+    size_t total = 0;
+
+    for (const auto& [key, vec] : buckets) {
+        total += sizeof(key);
+
+        total += sizeof(vec);
+        total += vec.capacity() * sizeof(std::string);
+
+        for (const auto& word : vec) {
+            total += sizeof(word);
+            total += word.capacity();
+        }
+    }
+
+    std::cout << "Bucket of size " << total / 1024 << " KB";
 
     file.close();
 }

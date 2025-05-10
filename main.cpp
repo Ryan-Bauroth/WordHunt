@@ -5,9 +5,13 @@
 #include "TrieSolver.h"
 
 int main() {
-    // can be either BucketSolver or TrieSolver
-    TrieSolver solver;
     std::cout << "Enter 0 at any time to exit" << std::endl;
+    // can be either BucketSolver or TrieSolver
+    auto start = std::chrono::high_resolution_clock::now();
+    BucketSolver solver;
+    auto dur = duration_cast<std::chrono::milliseconds>( std::chrono::high_resolution_clock::now() - start);
+    std::cout << " initialized in " << dur.count() << " milliseconds" << std::endl;
+
 
     while (true) {
         std::cout << std::endl;
